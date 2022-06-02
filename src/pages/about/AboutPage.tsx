@@ -1,0 +1,26 @@
+import React from 'react';
+import styled from "styled-components";
+
+export const About = styled.div`
+  margin: 25px auto;
+
+  p {
+    color: white;
+  }
+`
+
+const AboutPage: React.FC = () => {
+    return (
+        <About>
+            <p>
+                React - Необходимо создать приложение которое использует api https://swapi.dev/.
+                Приложение должно уметь искать персонажей по имени и выводить списком. При нажатии на персонажа
+                показывать информацию о нем отдельной страницей
+                Хранить историю просмотренных персонажей в текущей сессии и выводить на главной
+                Необходимо использовать хуки и контекст, typescript приветствуется
+            </p>
+        </About>
+    );
+};
+
+export default AboutPage;
