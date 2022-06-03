@@ -1,23 +1,36 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 export const CharCard = styled.li`
   display: flex;
-  width: 250px;
-  height: 200px;
-  color: white;
-  font-size: 18px;
-  padding: 15px;
+  width: 300px;
   cursor: pointer;
-  margin: 10px 10px 0 10px;
+  margin-bottom: 10px;
   background: rgba(94, 94, 94, 0.4);
   border-radius: .5rem;
   transition: .2s;
+  text-decoration: none;;
 
-  span {
-    color: #8400ff;
-  }
 
   &:hover {
     background: rgba(94, 94, 94, 0.8);
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`
+
+// export interface ILink {
+//     name: string
+//     to: string
+// }
+
+export const CharLink = styled(Link)`
+  width: 100%;
+  padding: 15px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 18px;
 `

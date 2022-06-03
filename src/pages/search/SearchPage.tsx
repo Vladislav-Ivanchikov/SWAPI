@@ -19,8 +19,6 @@ const SearchPage: React.FC = () => {
         }
     }, [setPeople])
 
-    console.log(people)
-
     return (
         <Wrapper>
             <Title>Enter character name</Title>

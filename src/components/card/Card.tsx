@@ -1,19 +1,17 @@
 import React from 'react';
 import {ICharacter} from "../../types/character";
-import {CharCard} from "./Card.style";
+import {CharCard, CharLink} from "./Card.style";
+import {useLocation} from "react-router-dom";
 
-const Card: React.FC<ICharacter> = ({gender, height, hair_color, eye_color, mass, name, birth_year}) => {
+const Card: React.FC<ICharacter> = ({name}) => {
+    const url = useLocation()
+    const pathName = name.split(' ').join('')
+
     return (
         <CharCard>
-            <div>
-                <p>Name: <span>{name}</span></p>
-                <p>Birth year: <span>{birth_year}</span></p>
-                <p>Gender: <span>{gender}</span></p>
-                <p>Height: <span>{height}</span></p>
-                <p>Mass: <span>{mass}</span></p>
-                <p>Eye color: <span>{eye_color}</span></p>
-                <p>Hair color: <span>{hair_color}s</span></p>
-            </div>
+            <CharLink to={`${url.pathname}/${pathName}`} state={{name}}>
+                <p>{name}</p>
+            </CharLink>
         </CharCard>
     );
 };
