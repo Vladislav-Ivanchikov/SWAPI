@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 
 export const About = styled.div`
+  max-width: 800px;
+  text-align: center;
   margin: 25px auto;
 
   p {

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import SearchContext from "./context/searchContext";
+import PeopleContext from "./context/peopleContext";
 import App from './App';
 
 const root = ReactDOM.createRoot(
@@ -8,13 +8,13 @@ const root = ReactDOM.createRoot(
 );
 
 function Main() {
-    const [query, setQuery] = useState<string>('')
+    const [people, setPeople] = useState([])
 
     return (
         <React.StrictMode>
-            <SearchContext.Provider value={{query, setQuery}}>
+            <PeopleContext.Provider value={{people, setPeople}}>
                 <App/>
-            </SearchContext.Provider>
+            </PeopleContext.Provider>
         </React.StrictMode>
     )
 }
