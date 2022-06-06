@@ -1,30 +1,15 @@
-import React, {useContext, useEffect} from 'react';
-import styled from "styled-components";
-import PeopleContext from "../../context/peopleContext";
-import {Title} from "../main/MainPage";
-import PeopleList from "../../components/people/PeopleList";
-import SearchForm from "../../components/form/SearchForm";
-
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`
+import React from 'react';
+import People from "../../components/People/People";
+import SearchForm from "../../components/SearchForm/SearchForm";
+import {Container, Title} from '../../components/ViewedCharacters/ViewedCharacters.style';
 
 const SearchPage: React.FC = () => {
-    const {people, setPeople} = useContext(PeopleContext)
-
-    useEffect(() => {
-        return () => {
-            setPeople([])
-        }
-    }, [setPeople])
-
     return (
-        <Wrapper>
+        <Container>
             <Title>Enter character name</Title>
             <SearchForm/>
-            {people.length > 0 ? <PeopleList/> : <Title>Character not found. Try again!</Title>}
-        </Wrapper>
+            <People/>
+        </Container>
     );
 };
 

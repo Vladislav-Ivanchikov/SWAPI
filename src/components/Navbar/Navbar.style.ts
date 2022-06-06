@@ -9,7 +9,7 @@ export const Header = styled.header`
   height: 10vh;
   background: rgba(94, 94, 94, 0.4);
   transition: background .3s;
-  
+
   &:hover {
     background: rgba(94, 94, 94, 0.7);
   }

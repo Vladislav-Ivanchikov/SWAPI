@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Nav, CustomLink } from './Navbar.style';
+import {CustomLink, Header, Nav} from './Navbar.style';
 
 const Navbar: React.FC = () => {
     return (

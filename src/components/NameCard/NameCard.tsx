@@ -1,9 +1,9 @@
 import React from 'react';
-import {ICharacter} from "../../types/character";
-import {CharCard, CharLink} from "./Card.style";
 import {useLocation} from "react-router-dom";
+import {ICard} from "../../types/nameCard";
+import {CharCard, CharLink} from "./NameCard.style";
 
-const Card: React.FC<ICharacter> = ({name}) => {
+const NameCard: React.FC<ICard> = ({name}) => {
     const url = useLocation()
     const pathName = name.split(' ').join('')
 
@@ -16,4 +16,4 @@ const Card: React.FC<ICharacter> = ({name}) => {
     );
 };
 
-export default Card;
+export default NameCard;

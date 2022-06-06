@@ -21,11 +21,6 @@ export const CharCard = styled.li`
   }
 `
 
-// export interface ILink {
-//     name: string
-//     to: string
-// }
-
 export const CharLink = styled(Link)`
   width: 100%;
   padding: 15px;
