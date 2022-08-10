@@ -1,25 +1,22 @@
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
 import PeopleContext from "./context/peopleContext";
-import App from './components/App/App';
+import App from "./components/App/App";
 
 const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 
 function Main() {
-    const [people, setPeople] = useState([])
+  const [people, setPeople] = useState([]);
 
-    return (
-        <React.StrictMode>
-            <PeopleContext.Provider value={{people, setPeople}}>
-                <App/>
-            </PeopleContext.Provider>
-        </React.StrictMode>
-    )
+  return (
+    <React.StrictMode>
+      <PeopleContext.Provider value={{ people, setPeople }}>
+        <App />
+      </PeopleContext.Provider>
+    </React.StrictMode>
+  );
 }
 
-root.render(
-    <Main/>
-);
-
+root.render(<Main />);

@@ -5,18 +5,9 @@ export const Container = styled.div`
   height: 90vh;
   flex-direction: column;
   justify-content: center;
-`
+`;
 
 export const Title = styled.h2`
   color: white;
   margin: 25px auto;
-`
-
-export const ViewedItem = styled.div`
-  width: 100%;
-  padding: 15px;
-  text-decoration: none;
-  text-align: center;
-  color: white;
-  font-size: 18px;
-`
+`;

@@ -3,7 +3,7 @@ import {Navigate, Route, Routes} from "react-router";
 import {routes} from "../../utils/routes";
 import {RoutesName} from "../../types/routes";
 
-const AppRouter = () => {
+const AppRouter: React.FC = () => {
     return (
         <Routes>
             {routes.map(({path, element}) =>

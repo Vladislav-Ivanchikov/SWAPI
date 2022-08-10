@@ -1,10 +1,8 @@
-import React from 'react';
+import React from "react";
 import ViewedCharacters from "../../components/ViewedCharacters/ViewedCharacters";
 
 const MainPage: React.FC = () => {
-    return (
-        <ViewedCharacters/>
-    );
+  return <ViewedCharacters />;
 };
 
 export default MainPage;

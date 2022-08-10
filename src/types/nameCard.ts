@@ -1,3 +1,4 @@
-export interface ICard {
-    name: string
+export interface INameCard {
+  name: string;
+  main?: boolean;
 }
